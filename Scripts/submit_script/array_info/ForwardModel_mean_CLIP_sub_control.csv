@@ -1,0 +1,17 @@
+,SUB,ROI
+0,1,dvs
+1,2,dvs
+2,5,dvs
+3,7,dvs
+4,1,lvs
+5,2,lvs
+6,5,lvs
+7,7,lvs
+8,1,MPC
+9,2,MPC
+10,5,MPC
+11,7,MPC
+12,1,MPFC
+13,2,MPFC
+14,5,MPFC
+15,7,MPFC

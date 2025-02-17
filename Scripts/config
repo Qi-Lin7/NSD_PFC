@@ -1,0 +1,8 @@
+[DIR]
+NSD_top_dir=/Projects/NSD_GenPFC # Swap this to your local directory of the project
+
+[PARAM]
+beta_bulk_size=100
+NoCV_bulk_size=500
+CV_bulk_size=300
+CV_bulk_size_all=5000
