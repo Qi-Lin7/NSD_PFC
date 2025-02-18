@@ -3,7 +3,7 @@
 This repo contains the code base for running the main analyses presented in the following manuscript:
 Lin, Q., & Lau, H. (2024). Individual differences in prefrontal coding of visual features. bioRxiv. 
 
-## 0 Setup and download
+## Setup and download
 ### 0.1 Clone the Repository
 ```
 git clone ttps://github.com/Qi-Lin7/NSD_PFC.git
