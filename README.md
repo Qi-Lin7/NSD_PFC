@@ -54,7 +54,7 @@ python ./Scripts/func/select_verts.py
 This generates a dataframe containing the vertex indices with a R2 in the top 10% of all the LPFC vertices based on the ridge regressin in the training image set. The resulting ouptut should be in ./results/CLIP_selected_verts. 
 
 #### Step 3: Run cross-validation in the selected vertices
-Use ./Scripts/func/RidgeR_CV_CLIP.py and ./Scripts/submit_script/submit_ridge.sh to submit individual jobs that run the ridge regression and validation on bulks of 300 vertices. The resulting output should be in ./results/CV_results_CLIP. 
+Use ./Scripts/func/RidgeR_CV_CLIP.py and ./Scripts/submit_script/submit_ridge.sh to submit individual jobs that run the ridge regression and validation on bulks of 300 vertices. The resulting output should be in ./results/CV_results_CLIP. CSV files corresponding to the results plotted in the paper have been uploaded in case the user only wants to reproduce the graphs without needing to run the entire analysis.  
 
 #### Step 4: Plot the results
 Run ./Scripts/check_results/Figure1_Check_regression_results.ipynb to reproduce the results panels in Figure 1. 
@@ -72,7 +72,7 @@ To extract betas in ventral visual stream (and A1, for Figure S6), use ./Scripts
 /betas_native/
 
 #### Step 2: Run the cross-validation in ventral visual stream vertices
-Use ./Scripts/func/RidgeR_CV_CLIP.py and ./Scripts/submit_script/submit_ridge.sh to submit individual jobs that run the ridge regression and validation on bulks of 300 vertices. The resulting output should be in ./results/CV_results_CLIP. 
+Use ./Scripts/func/RidgeR_CV_CLIP.py and ./Scripts/submit_script/submit_ridge.sh to submit individual jobs that run the ridge regression and validation on bulks of 300 vertices. The resulting output should be in ./results/CV_results_CLIP. CSV files corresponding to the results plotted in the paper have been uploaded in case the user only wants to reproduce the graphs without needing to run the entire analysis.   
 
 #### Step 3: Run the analysis and plot the results
 Run ./Scripts/check_results/Figure3_RSA.ipynb to reproduce the results panels in Figure 3.
@@ -80,7 +80,6 @@ Run ./Scripts/check_results/Figure3_RSA.ipynb to reproduce the results panels in
 ### 1.4 Figure 4: Univariate activation
 #### Step 1: Train and run the predictive models
 Use ./Scripts/func/CLIP_ForwardModel_univariate_reg.py and 。/Scripts/submit_script/submit_univariate.sh to submit individual jobs that train an encoding model of the average activation for each ROI (LPFC or visual regions) and generate predicted activation for all 730000 images. The results output should be in be in ./results/Pred_activation.
-
 
 #### Step 2: Plot results
 Run ./Scripts/check_results/Figure4_Univariate.ipynb to reproduce the results panels in Figure 4.
