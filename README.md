@@ -79,7 +79,8 @@ Run ./Scripts/check_results/Figure3_RSA.ipynb to reproduce the results panels in
 
 ### 1.4 Figure 4: Univariate activation
 #### Step 1: Train and run the predictive models
-Use ./Scripts/func/CLIP_ForwardModel_univariate_reg.py and 。/Scripts/submit_script/submit_univariate.sh to submit individual jobs that train an encoding model of the average activation for each ROI (LPFC or visual regions) and generate predicted activation for all 730000 images. The results output should 
+Use ./Scripts/func/CLIP_ForwardModel_univariate_reg.py and 。/Scripts/submit_script/submit_univariate.sh to submit individual jobs that train an encoding model of the average activation for each ROI (LPFC or visual regions) and generate predicted activation for all 730000 images. The results output should be in be in ./results/Pred_activation.
+
 
 #### Step 2: Plot results
 Run ./Scripts/check_results/Figure4_Univariate.ipynb to reproduce the results panels in Figure 4.
