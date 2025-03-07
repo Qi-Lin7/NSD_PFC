@@ -1,8 +1,8 @@
 #!/bin/sh
 #-------slurm option--------#
 #SBATCH --nodes=1
-#SBATCH --mem=40G
-#SBATCH --time=23:59:00
+#SBATCH --mem=15G
+#SBATCH --time=3:59:00
 #SBATCH --array=1
 
 python -u ../func/RidgeR_noCV_CLIP.py $SLURM_ARRAY_TASK_ID

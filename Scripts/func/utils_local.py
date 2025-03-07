@@ -279,30 +279,6 @@ def load_memory_var_encoding(img_ind, sub, stim_seq, resp_df):
         return False, None, None
 
 
-def reorder_betas_feats_train(betas, feats, train_inds):
-    
-    num_patterns = [betas[k].shape[1] for k in list(train_inds)]
-    total_num_patterns = np.sum(num_patterns)
-    
-    # Pregenerate holders
-    train_betas_array = np.zeros((total_num_patterns, betas[0].shape[0]))
-    train_features_array = np.zeros((total_num_patterns, feats.shape[1]))
-    
-    count = 0
-    for ind, curr_train_ind in enumerate(list(train_inds)):
-        # ind refers to the actual index of each element in the train_inds, 
-        # curr_train_ind refers to the element itself (i.e., indexes list_betas and features array)
-        
-        curr_num_patterns = num_patterns[ind]
-        train_betas_array[count:count+curr_num_patterns, :] = betas[curr_train_ind].T
-        
-        _feat_array = np.repeat(np.expand_dims(feats[curr_train_ind,:], -1),
-                               curr_num_patterns, axis=1)
-        train_features_array[count:count+curr_num_patterns, :] = _feat_array.T
-        count += curr_num_patterns
-    
-    return train_betas_array, train_features_array
-
 def reorder_betas_feats_test(betas, feats, test_inds):
     
     test_betas_array = np.array([np.nanmean(betas[k], axis=1) if betas[k].shape[1]>1 else np.squeeze(betas[k]) for k in list(test_inds)])

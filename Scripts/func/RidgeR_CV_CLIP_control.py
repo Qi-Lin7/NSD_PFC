@@ -5,8 +5,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.linear_model import Ridge
 from scipy import stats
 import nibabel as nib
-
-from utils_local import reorder_betas_feats_train, reorder_betas_feats_test
+from utils_local import reorder_betas_feats_test
 
 
 exp_config = configparser.ConfigParser()
@@ -14,6 +13,7 @@ exp_config.read('../config')
 NSD_top_dir = exp_config['DIR']['NSD_top_dir']
 comb_df = pd.read_csv(os.path.join(NSD_top_dir,
                       'Scripts',
+                      'Manuscript',
                       'submit_script',
                       'array_info',
                       'CV_Ridge_df_control_allsubs.csv'))
@@ -142,7 +142,7 @@ all_intercepts_array = np.zeros((1, list_betas_unique[0].shape[0]))
 # Go through all the vertices
 for vi in range(list_betas_unique[0].shape[0]):
     time1 = time.time()
-    ordered_train_betas, ordered_train_feats = reorder_betas_feats_train(list_betas_unique, unique_features_array,
+    ordered_train_betas, ordered_train_feats = reorder_betas_feats_test(list_betas_unique, unique_features_array,
                                                                          list(range(len(list_betas_unique))))
     # Remove NaNs
     if np.sum(np.isnan(ordered_train_betas[:, vi]))>0:

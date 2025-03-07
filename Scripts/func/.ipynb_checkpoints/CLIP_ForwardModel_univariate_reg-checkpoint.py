@@ -12,7 +12,7 @@ import clip
 from sklearn.model_selection import GridSearchCV
 from sklearn.linear_model import Ridge
 
-from utils_local import reorder_betas_feats_train, reorder_betas_feats_test
+from utils_local import reorder_betas_feats_test
 
 exp_config = configparser.ConfigParser()
 exp_config.read('../config')

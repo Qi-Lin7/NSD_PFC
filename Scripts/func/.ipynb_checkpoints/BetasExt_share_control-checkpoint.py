@@ -12,6 +12,7 @@ exp_config.read('../config')
 NSD_top_dir = exp_config['DIR']['NSD_top_dir']
 comb_df = pd.read_csv(os.path.join(NSD_top_dir,
                       'Scripts',
+                      'Manuscript',
                       'submit_script',
                       'array_info',
                       'Beta_Extract_share_control.csv'))
