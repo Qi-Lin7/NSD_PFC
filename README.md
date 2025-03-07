@@ -15,6 +15,7 @@ cd NSD_PFC
 conda env create -f environment.yml
 conda activate GenPFC_mini
 ```
+This should take about 1 hour. 
 ### 0.3 Download the data from NSD (http://naturalscenesdataset.org)
 The downloaded data should be placed under the ./data directory. 
 We need:
@@ -31,6 +32,6 @@ We additionally need some functionality provided by the NSD team.
 cd Scripts
 git clone https://github.com/cvnlab/nsdcode.git
 ```
-
+## Preparation
 
 
