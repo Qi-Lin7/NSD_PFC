@@ -6,7 +6,7 @@ Lin, Q., & Lau, H. (2024). Individual differences in prefrontal coding of visual
 ## Setup and download
 ### 0.1 Clone the Repository
 ```
-git clone ttps://github.com/Qi-Lin7/NSD_PFC.git
+git clone https://github.com/Qi-Lin7/NSD_PFC.git
 cd NSD_PFC
 ```
 
