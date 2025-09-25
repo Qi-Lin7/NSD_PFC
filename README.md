@@ -37,7 +37,7 @@ In the ./Scripts/prepration directory, there are a few scripts useful for genera
 
 ## Analyses
 ### 1.1 Figure 1: Building and evaluating encoding models of LPFC
-Note that because the size of NSD, this part should ideally be run on a high-performance cluster. 
+Note that because of the size of NSD, this part should ideally be run on a high-performance cluster. 
 #### Step 1: Extract the CLIP features and LPFC betas
 To extract betas in LPFC, use ./Scripts/func/BetasExt_unique.py (for extracting betas corresponding to the subject-specific images, used for training) and ./Scripts/func/BetasExt_share.py (for extracting betas corresponding to the share images, used for validation). Use ./Scripts/submit_script/submit_beta.sh to submit individual jobs that extract betas corresponding to bulks of 100 images in size (each job should take about 1 hour). The resulting output can be found in ./intermediate
 /betas_native/
